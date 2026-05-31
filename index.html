@@ -268,19 +268,11 @@ function openFacebook() {
 
     if (isMobile) {
 
-        // Facebookアプリ起動
         window.location.href =
             "fb://profile/100011211570661";
 
-        // アプリが無い場合はWeb版へ
-        setTimeout(function() {
-            window.location.href =
-                "https://www.facebook.com/katsumi.maki.16";
-        }, 800);
-
     } else {
 
-        // PCはWeb版
         window.open(
             "https://www.facebook.com/katsumi.maki.16",
             "_blank"
