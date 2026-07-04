@@ -374,6 +374,31 @@ h1 {
 .timeline-content { min-width: 0; color: #475569; }
 .timeline-content strong { color: var(--text); font-size: 1.02rem; }
 
+.timeline-item--ted .timeline-content::before,
+.timeline-item--coderdojo .timeline-content::before {
+    display: table;
+    margin-bottom: 7px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.timeline-item--ted .timeline-content::before {
+    content: "TED / TEDx関連";
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.timeline-item--coderdojo .timeline-content::before {
+    content: "CoderDojo関連";
+    color: #15803d;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
 .timeline-link-card {
     display: block;
     width: min(100%, 420px);
@@ -533,7 +558,7 @@ h1 {
 
     <div class="timeline">
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--coderdojo">
             <div class="timeline-year">2026/03/29</div>
             <div class="timeline-content">
                 <strong>Coolest Projects Japan 2026（名古屋）</strong><br>
@@ -549,7 +574,7 @@ h1 {
 
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2026/02/06</div>
             <div class="timeline-content">
                 <strong>TED Translators TOP CONTRIBUTORS</strong><br>
@@ -565,7 +590,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2025/12/06</div>
             <div class="timeline-content">
                 <strong>TEDxAnjo 2025</strong><br>
@@ -582,7 +607,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2025/07/04</div>
             <div class="timeline-content">
                 <strong>TED Translators TOP CONTRIBUTORS</strong><br>
@@ -598,7 +623,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2023/12/03</div>
             <div class="timeline-content">
                 <strong>TEDxKyoto 2023</strong><br>
@@ -614,7 +639,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2023/10/21</div>
             <div class="timeline-content">
                 <strong>TEDxAnjo Women 2023</strong><br>
@@ -630,7 +655,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--coderdojo">
             <div class="timeline-year">2023/08/27</div>
             <div class="timeline-content">
                 <strong>DojoCon Japan 2023（奈良）</strong><br>
@@ -647,7 +672,7 @@ h1 {
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--coderdojo">
             <div class="timeline-year">2022/11/27</div>
             <div class="timeline-content">
                 <strong>DojoCon Japan 2022（富山）</strong><br>
@@ -663,7 +688,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2022/11/13</div>
             <div class="timeline-content">
                 <strong>TEDxHamamatsu 2022</strong><br>
@@ -679,7 +704,7 @@ h1 {
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2022/03/06</div>
             <div class="timeline-content">
                 <strong>TEDxAnjo 2022</strong><br>
@@ -696,7 +721,7 @@ h1 {
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2020/11/29</div>
             <div class="timeline-content">
                 <strong>TEDxAnjo 2020</strong><br>
@@ -711,7 +736,7 @@ h1 {
                 </a>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--coderdojo">
             <div class="timeline-year">2019/12/21</div>
             <div class="timeline-content">
                 <strong>DojoCon Japan 2019（名古屋）</strong><br>
@@ -726,7 +751,7 @@ h1 {
                 </a>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2019/11/01</div>
             <div class="timeline-content">
                 <strong>TEDxWeekendTaipei（台湾）</strong><br>
@@ -741,7 +766,7 @@ h1 {
                 </a>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2019/09/22</div>
             <div class="timeline-content">
                 <strong>TEDxHamamatsu 2019</strong><br>
@@ -756,7 +781,7 @@ h1 {
                 </a>
             </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2019/07/28</div>
             <div class="timeline-content">
                 <strong>TEDxAnjo 2019</strong><br>
