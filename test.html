@@ -7,7 +7,7 @@
     
 <title>牧 勝己 | Katsumi Maki</title>
 
-<link rel="icon" type="image/png" href="favicon.png?v=2026070402">
+<link rel="icon" type="image/png" href="favicon.png?v=2026070403">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
@@ -194,6 +194,35 @@ h1 {
     color: #222;
 }
 
+.timeline-link-card {
+    display: inline-block;
+    margin-top: 8px;
+    max-width: 220px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.timeline-link-card img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background: #f3f4f6;
+}
+
+.timeline-link-text {
+    display: inline-block;
+    margin-top: 8px;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.timeline-link-text:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 600px) {
     .timeline-item {
         grid-template-columns: 1fr;
@@ -309,7 +338,15 @@ h1 {
             <div class="timeline-content">
                 <strong>Coolest Projects Japan 2026</strong><br>
                 子どもたちのための世界的な作品展示イベント「Coolest Projects Japan 2026」に実行委員として参加
-                https://coolestprojects2026.coderdojo.jp/
+                <a class="timeline-link-card"
+                   href="https://coolestprojects2026.coderdojo.jp/"
+                   data-preview-url="https://coolestprojects2026.coderdojo.jp/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Coolest Projects Japan 2026">
+                    <img src="" alt="Coolest Projects Japan 2026 サムネイル">
+                </a>
+
             </div>
         </div>
 
@@ -333,6 +370,54 @@ h1 {
 </div>
   
 <script>
+function resolvePreviewUrl(baseUrl, imageUrl) {
+    try {
+        return new URL(imageUrl, baseUrl).href;
+    } catch (error) {
+        return imageUrl;
+    }
+}
+
+function loadPreviewImage(linkElement) {
+    const targetUrl = linkElement.getAttribute('data-preview-url');
+    const imageElement = linkElement.querySelector('img');
+
+    if (!targetUrl || !imageElement) {
+        return;
+    }
+
+    const proxyUrl = 'https://r.jina.ai/http://' + targetUrl.replace(/^https?:\/\//, '');
+
+    fetch(proxyUrl)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('preview fetch failed');
+            }
+            return response.text();
+        })
+        .then((html) => {
+            const matches = html.matchAll(/<meta[^>]+(?:property|name)=['"]([^'"]+)['"][^>]+content=['"]([^'"]+)['"][^>]*>/gi);
+            let previewUrl = '';
+
+            for (const match of matches) {
+                const key = match[1].toLowerCase();
+                const value = match[2];
+                if ((key === 'og:image' || key === 'twitter:image') && value) {
+                    previewUrl = value;
+                    break;
+                }
+            }
+
+            if (previewUrl) {
+                imageElement.src = resolvePreviewUrl(targetUrl, previewUrl);
+                imageElement.alt = 'リンク先のサムネイル';
+            }
+        })
+        .catch(() => {
+            imageElement.alt = 'サムネイルを取得できませんでした';
+        });
+}
+
 function openFacebook() {
 
     const isMobile =
@@ -352,6 +437,14 @@ function openFacebook() {
 
     }
 }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.timeline-link-card[data-preview-url]').forEach((element) => {
+        loadPreviewImage(element);
+    });
+});
 </script>
     
 </body>
