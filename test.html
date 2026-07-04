@@ -163,6 +163,44 @@ h1 {
         font-size: 0.75rem;
     }
 }
+
+.timeline {
+    margin-top: 24px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-year {
+    color: #1d4ed8;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.timeline-content {
+    line-height: 1.8;
+}
+
+.timeline-content strong {
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+}
+    
 </style>
 </head>
 
