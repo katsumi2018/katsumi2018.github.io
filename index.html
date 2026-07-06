@@ -13,7 +13,7 @@ gtag('js', new Date());
 
 gtag('config', 'G-FNYEM9SRFM');
 </script>
-    
+
 <title>牧 勝己 | Katsumi Maki</title>
 
 <link rel="icon" type="image/png" href="favicon.png?v=2026070406">
@@ -24,63 +24,33 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                  "Hiragino Sans", "Yu Gothic", sans-serif;
-    background: #f7f8fa;
-    color: #333;
 }
 
 .container {
-    max-width: 760px;
     margin: auto;
-    padding: 40px 20px;
 }
 
 .card {
     background: #fff;
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 h1 {
     margin: 0;
-    font-size: 2.4rem;
 }
 
 .subtitle {
-    color: #666;
-    margin-top: 8px;
     font-size: 1.1rem;
 }
 
 .badge {
-    display: inline-block;
-    margin-top: 14px;
-    padding: 6px 14px;
     border-radius: 20px;
     background: #eef3ff;
     color: #1d4ed8;
     font-size: 0.9rem;
 }
 
-.section {
-    margin-top: 36px;
-}
-
-.section h2 {
-    font-size: 1.2rem;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 8px;
-}
-
-.profile {
-    line-height: 1.9;
-}
-
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 26px 20px;
-    margin-top: 26px;
 }
 
 .social-item {
@@ -88,22 +58,16 @@ h1 {
 }
 
 .social-item a {
-    width: 62px;
-    height: 62px;
     margin: 0 auto;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 28px;
     text-decoration: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .social-item a:hover {
     transform: translateY(-4px);
-    opacity: 0.9;
 }
 
 .social-item span {
@@ -121,10 +85,6 @@ h1 {
     background: #1877F2;
 }
 
-.instagram {
-    background: #E4405F;
-}
-
 .github {
     background: #24292F;
 }
@@ -138,109 +98,37 @@ h1 {
 }
 
 .footer {
-    margin-top: 50px;
     text-align: center;
-    color: #888;
-    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
-    .container {
-        padding: 24px 14px;
-    }
-
-    .card {
-        padding: 24px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .social-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px 10px;
-    }
-
-    .social-item a {
-        width: 54px;
-        height: 54px;
-        font-size: 24px;
-    }
-
     .social-item span {
         font-size: 0.75rem;
     }
 }
 
-.timeline {
-    margin-top: 24px;
-}
-
 .timeline-item {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 20px;
-    padding: 18px 0;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.timeline-item:last-child {
-    border-bottom: none;
-}
-
-.timeline-year {
-    color: #1d4ed8;
-    font-weight: 600;
-    font-size: 0.95rem;
 }
 
 .timeline-content {
     line-height: 1.8;
 }
 
-.timeline-content strong {
-    color: #222;
-}
-
 .timeline-link-card {
-    display: inline-block;
-    margin-top: 8px;
-    max-width: 220px;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .timeline-link-card img {
     display: block;
     width: 100%;
-    height: 140px;
     object-fit: cover;
     background: #f3f4f6;
 }
 
-.timeline-link-text {
-    display: inline-block;
-    margin-top: 8px;
-    color: #1d4ed8;
-    text-decoration: none;
-}
-
-.timeline-link-text:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-    .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
-}
     
 
-/* Refined page layout */
 :root {
     --page-bg: #f3f6fb;
     --text: #172033;
@@ -259,7 +147,6 @@ body {
 
 .container {
     width: min(100% - 32px, 900px);
-    max-width: none;
     padding: 56px 0;
 }
 
@@ -322,7 +209,6 @@ h1 {
 }
 
 .social-item a:hover {
-    opacity: 1;
     box-shadow: 0 12px 24px rgba(15,23,42,.18);
 }
 
@@ -355,7 +241,6 @@ h1 {
     grid-template-columns: 116px minmax(0, 1fr);
     gap: 28px;
     padding: 0 0 34px 30px;
-    border-bottom: 0;
 }
 
 .timeline-item:last-child { padding-bottom: 0; }
@@ -411,7 +296,6 @@ h1 {
 .timeline-link-card {
     display: block;
     width: min(100%, 420px);
-    max-width: none;
     margin-top: 14px;
     border-color: var(--line);
     border-radius: 14px;
@@ -430,9 +314,7 @@ h1 {
 }
 
 .timeline-link-card--contain img {
-    height: auto;
     aspect-ratio: auto;
-    object-fit: initial;
     background: #fff;
 }
 .instagram-embed {
@@ -579,11 +461,11 @@ h1 {
                 子どもたちのための世界的な作品展示イベント「Coolest Projects Japan 2026」に実行委員として参加
                 <a class="timeline-link-card"
                    href="https://coolestprojects2026.coderdojo.jp/"
-                   data-preview-url="https://coolestprojects2026.coderdojo.jp/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="Coolest Projects Japan 2026">
-                    <img alt="Coolest Projects Japan 2026 サムネイル">
+                    <img src="images/thumbnails/coolest-projects-2026.jpg"
+                         alt="Coolest Projects Japan 2026 サムネイル">
                 </a>
 
             </div>
@@ -611,11 +493,10 @@ h1 {
                 TEDxAnjo 2025に当日ボランティアとして参加。
                 <a class="timeline-link-card timeline-link-card--contain"
                    href="https://tedxanjo.com/tedxanjo2025/"
-                   data-preview-url="https://tedxanjo.com/tedxanjo2025/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxAnjo 2025">
-                    <img src="https://tedxanjo.com/wp-content/uploads/2025/09/key-visual-of-2025.png"
+                    <img src="images/thumbnails/tedxanjo-2025.png"
                          alt="TEDxAnjo 2025のサムネイル">
                 </a>
             </div>
@@ -644,11 +525,11 @@ h1 {
                 TEDxKyoto 2023に当日ボランティアとして参加。
                 <a class="timeline-link-card"
                    href="https://tedxkyoto.com/tedxkyoto_events/tedxkyoto-2023-together"
-                   data-preview-url="https://tedxkyoto.com/tedxkyoto_events/tedxkyoto-2023-together"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxKyoto 2023 Together">
-                    <img alt="TEDxKyoto 2023 Togetherのサムネイル">
+                    <img src="images/thumbnails/tedxkyoto-2023.jpg"
+                         alt="TEDxKyoto 2023 Togetherのサムネイル">
                 </a>
             </div>
         </div>
@@ -660,11 +541,11 @@ h1 {
                 TEDxAnjo Women 2023にスタッフとして参加。
                 <a class="timeline-link-card"
                    href="https://tedxanjo.com/tedxanjowomen2023/"
-                   data-preview-url="https://tedxanjo.com/tedxanjowomen2023/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxAnjo Women 2023">
-                    <img alt="TEDxAnjo Women 2023のサムネイル">
+                    <img src="images/thumbnails/tedxanjo-women-2023.png"
+                         alt="TEDxAnjo Women 2023のサムネイル">
                 </a>
             </div>
         </div>
@@ -676,15 +557,14 @@ h1 {
                 DojoCon Japan 2023（奈良）に当日スタッフとして参加。
                 <a class="timeline-link-card"
                    href="https://dojocon2023.coderdojo.jp/"
-                   data-preview-url="https://dojocon2023.coderdojo.jp/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="DojoCon Japan 2023">
-                    <img alt="DojoCon Japan 2023のサムネイル">
+                    <img src="images/thumbnails/dojocon-2023.jpg"
+                         alt="DojoCon Japan 2023のサムネイル">
                 </a>
             </div>
         </div>
-
 
         <div class="timeline-item timeline-item--coderdojo">
             <div class="timeline-year">2022/11/27</div>
@@ -693,11 +573,11 @@ h1 {
                 DojoCon Japan 2022（富山）に実行委員として参加。
                 <a class="timeline-link-card"
                    href="https://dojocon2022.coderdojo.jp/"
-                   data-preview-url="https://dojocon2022.coderdojo.jp/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="DojoCon Japan 2022">
-                    <img alt="DojoCon Japan 2022のサムネイル">
+                    <img src="images/thumbnails/dojocon-2022.jpg"
+                         alt="DojoCon Japan 2022のサムネイル">
                 </a>
             </div>
         </div>
@@ -709,11 +589,11 @@ h1 {
                 TEDxHamamatsu 2022に当日ボランティアとして参加。
                 <a class="timeline-link-card"
                    href="https://tedxhamamatsu.com/events/tedxhamamatsu-2022/"
-                   data-preview-url="https://tedxhamamatsu.com/events/tedxhamamatsu-2022/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxHamamatsu 2022">
-                    <img alt="TEDxHamamatsu 2022のサムネイル">
+                    <img src="images/thumbnails/tedxhamamatsu-2022.png"
+                         alt="TEDxHamamatsu 2022のサムネイル">
                 </a>
             </div>
         </div>
@@ -725,15 +605,14 @@ h1 {
                 TEDxAnjo 2022に当日ボランティアとして参加。
                 <a class="timeline-link-card timeline-link-card--contain"
                    href="https://tedxanjo.com/tedxanjo2022/"
-                   data-preview-url="https://tedxanjo.com/tedxanjo2022/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxAnjo 2022">
-                    <img alt="TEDxAnjo 2022のサムネイル">
+                    <img src="images/thumbnails/tedxanjo-2022.jpg"
+                         alt="TEDxAnjo 2022のサムネイル">
                 </a>
             </div>
         </div>
-
 
         <div class="timeline-item timeline-item--ted">
             <div class="timeline-year">2020/11/29</div>
@@ -742,11 +621,11 @@ h1 {
                 TEDxAnjo 2020にスタッフとして参加。
                 <a class="timeline-link-card timeline-link-card--contain"
                    href="https://tedxanjo.com/tedxanjo2020/"
-                   data-preview-url="https://tedxanjo.com/tedxanjo2020/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxAnjo 2020">
-                    <img alt="TEDxAnjo 2020のサムネイル">
+                    <img src="images/thumbnails/tedxanjo-2020.jpg"
+                         alt="TEDxAnjo 2020のサムネイル">
                 </a>
             </div>
         </div>
@@ -757,11 +636,11 @@ h1 {
                 DojoCon Japan 2019（名古屋）に実行委員として参加。
                 <a class="timeline-link-card"
                    href="https://dojocon2019.coderdojo.jp/"
-                   data-preview-url="https://dojocon2019.coderdojo.jp/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="DojoCon Japan 2019">
-                    <img alt="DojoCon Japan 2019のサムネイル">
+                    <img src="images/thumbnails/dojocon-2019.png"
+                         alt="DojoCon Japan 2019のサムネイル">
                 </a>
             </div>
         </div>
@@ -772,11 +651,11 @@ h1 {
                 TEDxWeekendTaipei（台湾）に参加。
                 <a class="timeline-link-card timeline-link-card--contain"
                    href="https://tedxweekendtaipei.wixsite.com/2019"
-                   data-preview-url="https://tedxweekendtaipei.wixsite.com/2019"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxWeekendTaipei 2019">
-                    <img alt="TEDxWeekendTaipei 2019のサムネイル">
+                    <img src="images/thumbnails/tedxweekendtaipei-2019.png"
+                         alt="TEDxWeekendTaipei 2019のサムネイル">
                 </a>
             </div>
         </div>
@@ -787,11 +666,11 @@ h1 {
                 TEDxHamamatsu 2019に当日ボランティアとして参加。
                 <a class="timeline-link-card"
                    href="https://tedxhamamatsu.com/events/tedxhamamatsu2019/"
-                   data-preview-url="https://tedxhamamatsu.com/events/tedxhamamatsu2019/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxHamamatsu 2019">
-                    <img alt="TEDxHamamatsu 2019のサムネイル">
+                    <img src="images/thumbnails/tedxhamamatsu-2019.jpg"
+                         alt="TEDxHamamatsu 2019のサムネイル">
                 </a>
             </div>
         </div>
@@ -802,11 +681,11 @@ h1 {
                 TEDxAnjo 2019にスタッフとして参加。
                 <a class="timeline-link-card timeline-link-card--contain"
                    href="https://tedxanjo.com/tedxanjo-2019/"
-                   data-preview-url="https://tedxanjo.com/tedxanjo-2019/"
                    target="_blank"
                    rel="noopener noreferrer"
                    aria-label="TEDxAnjo 2019">
-                    <img alt="TEDxAnjo 2019のサムネイル">
+                    <img src="images/thumbnails/tedxanjo-2019.jpg"
+                         alt="TEDxAnjo 2019のサムネイル">
                 </a>
             </div>
         </div>
@@ -819,39 +698,7 @@ h1 {
 
     </div>
 </div>
-  
 <script>
-async function loadPreviewImage(linkElement) {
-    const targetUrl = linkElement.dataset.previewUrl;
-    const imageElement = linkElement.querySelector('img');
-
-    if (!targetUrl || !imageElement) {
-        return;
-    }
-
-    const apiUrl =
-        `https://api.microlink.io/?url=${encodeURIComponent(targetUrl)}`;
-
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`preview fetch failed: ${response.status}`);
-        }
-
-        const result = await response.json();
-        const previewUrl = result?.data?.image?.url;
-
-        if (!previewUrl) {
-            throw new Error('preview image was not found');
-        }
-
-        imageElement.src = previewUrl;
-    } catch (error) {
-        imageElement.alt = 'サムネイルを取得できませんでした';
-        console.warn(error);
-    }
-}
-
 function openFacebook() {
 
     const isMobile =
@@ -871,13 +718,6 @@ function openFacebook() {
 
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
-    document
-        .querySelectorAll('.timeline-link-card[data-preview-url]')
-        .forEach(loadPreviewImage);
-});
 </script>
-
-    
 </body>
 </html>
